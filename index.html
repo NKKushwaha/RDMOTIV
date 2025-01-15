@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RDMOTIV - Premium Car Care Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <!-- Logo on the left for mobile -->
+            <a class="navbar-brand d-lg-none" href="#">
+                <span>RD</span>MOTIV
+            </a>
+
+            <!-- Toggler on the right for mobile -->
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar content -->
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <!-- Left Menu -->
+                <ul class="navbar-nav d-flex flex-row nav-underline">
+                    <li class="nav-item">
+                        <a class="nav-link" href="service.html">Service Enquiry</a>
+                    </li>
+                </ul>
+
+                <!-- Logo -->
+                <a class="navbar-brand px-2 d-none d-lg-block" href="#">
+                    <span>RD</span>MOTIV
+                </a>
+
+                <!-- Right Menu -->
+                <ul class="navbar-nav d-flex flex-row nav-underline">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Our Services
+                        </a>
+                        <ul class="dropdown-menu nav-underline" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item nav-link" href="ceramic_graphene_coatings.html">Ceramic and Graphene coatings</a></li>
+                            <li><a class="dropdown-item nav-link" href="paint_protection_films.html">Paint protection films</a></li>
+                            <li><a class="dropdown-item nav-link" href="body_shop_denting_painting.html">Body-shop (Denting & Painting)</a></li>
+                            <li><a class="dropdown-item nav-link" href="wrap_jobs.html">Wrap Jobs</a></li>
+                            <li><a class="dropdown-item nav-link" href="detailing_and_interior_cleaning.html">Detailing and Interior cleaning</a></li>
+                            <li><a class="dropdown-item nav-link" href="insurance_claims.html">Insurance Claims</a></li>
+                            <li><a class="dropdown-item nav-link" href="other_services.html">Other Services</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./assets/image/banner1.webp" class="d-block w-100" alt="Image Not Found">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/image/banner2.webp" class="d-block w-100" alt="Image Not Found">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/image/banner3.webp" class="d-block w-100" alt="Image Not Found">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        <!-- <div class="hero-content">
+            <h1>Premium Car Care Services</h1>
+            <p>Experience Excellence in Automotive Care</p>
+            <a href="#services" class="cta-button">Explore Services</a>
+        </div> -->
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-car-alt"></i>
+                    <h3>Ceramic & Graphene Coatings</h3>
+                    <p>Premium protection for your vehicle's exterior</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Paint Protection Films</h3>
+                    <p>Advanced protection against scratches and chips</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-spray-can"></i>
+                    <h3>Body Shop</h3>
+                    <p>Expert denting and painting services</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-palette"></i>
+                    <h3>Wrap Jobs</h3>
+                    <p>Custom vehicle wraps and styling</p>
+                </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-broom"></i>
+                    <h3>Detailing & Interior Cleaning</h3>
+                    <p>Comprehensive interior and exterior detailing</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-file-contract"></i>
+                    <h3>Insurance Claims</h3>
+                    <p>Hassle-free insurance claim assistance</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-window-maximize"></i>
+                    <h3>Window Tinting</h3>
+                    <p>Professional window tinting for comfort and style</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-car-side"></i>
+                    <h3>Interior Modification</h3>
+                    <p>Custom interior upgrades and premium upholstery services</p>
+                </div><div class="service-card">
+                    <i class="fas fa-tools"></i>
+                    <h3>Other Services</h3>
+                    <p>Custom solutions for all your automotive needs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Why Choose Us</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <i class="fas fa-tools"></i>
+                    <h3>Expert Technicians</h3>
+                    <p>Skilled professionals with years of experience</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-star"></i>
+                    <h3>Premium Quality</h3>
+                    <p>Using only the best products and techniques</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-clock"></i>
+                    <h3>Timely Service</h3>
+                    <p>Quick turnaround without compromising quality</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="ceramic_graphene_coatings.html" class="hover-effect">Ceramic & Graphene Coatings</a></li>
+                    <li><a href="paint_protection_films.html" class="hover-effect">Paint Protection Films</a></li>
+                    <li><a href="body_shop_denting_painting.html" class="hover-effect">Body-Shop (Denting & Painting)</a></li>
+                    <li><a href="wrap_jobs.html" class="hover-effect">Wrap Jobs</a></li>
+                    <li><a href="detailing_and_interior_cleaning.html" class="hover-effect">Detailing and Interior cleaning</a></li>
+                    <li><a href="insurance_claims.html" class="hover-effect">Insurance Claims</a></li>
+                    <li><a href="other_services.html" class="hover-effect">Other Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Other Services</h4>
+                <ul>
+                    <li><a href="#" class="hover-effect">Under-body anti-rust coatings</a></li>
+                    <li><a href="#" class="hover-effect">Windshield and all glass polishing</a></li>
+                    <li><a href="#" class="hover-effect">Seat covers and Door pad leather upholstery</a></li>
+                    <li><a href="#" class="hover-effect">Steering, Gear knob and Gear bellow covers</a></li>
+                    <li><a href="#" class="hover-effect">7D matts with custom stitchings</a></li>
+                    <li><a href="#" class="hover-effect">Headlight and taillight restorations</a></li>
+                    <li><a href="#" class="hover-effect">Body Washing and Vacuuming</a></li>
+                    <li><a href="#" class="hover-effect">Headliners replacement</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Visit The Store</h4>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3333.0037122095196!2d83.78548837485728!3d24.130450374080763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398c0f308b6329db%3A0x2694ac80c9d00cb0!2sJata%20Devi%20Dham!5e1!3m2!1sen!2sin!4v1736530420229!5m2!1sen!2sin"  loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>               
+                 </div>
+                <div class="address-section contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span><strong>Address: </strong>Jata Devi Dham ,Jata, Garhwa, Jharkhand 822114, India</span>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <div class="contact-info">
+                    <p class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span><strong>Email: </strong>contact@rdmotiv.in</span>
+                    </p>
+                    <p class="note contact-item">
+                        (Please do not send service/work enquiry on this mail. Click service enquiry on top of the page for enquiries.)
+                    </p>
+                    <br>
+                    <p class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span><strong>Phone: </strong>+91 7634025937</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-container">
+                <div class="copyright"> &copy;2025 RDMOTIV. All rights reserved.</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <a href="#" class="scroll-to-top">
+        <svg class="progress-circle" width="100%" height="100%" viewBox="0 0 40 40" preserveAspectRatio="xMidYMid meet">
+            <circle class="progress-circle-bg" cx="20" cy="20" r="18"></circle>
+            <circle class="progress-circle-path" cx="20" cy="20" r="18"></circle>
+        </svg>
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
