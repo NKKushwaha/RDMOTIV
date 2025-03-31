@@ -1,0 +1,106 @@
+{% extends 'nav.html' %}
+{% load static %}
+
+{% block title %}
+    <title>RDMOTIV - Body-shop (Denting & Painting)</title>
+{% endblock %}
+
+{% block boody_containt %}
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <!-- Logo on the left for mobile -->
+            <a class="navbar-brand d-lg-none" href=" {% url 'rdmotiv' %}">
+                <span>RD</span>MOTIV
+            </a>
+
+            <!-- Toggler on the right for mobile -->
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar content -->
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <!-- Left Menu -->
+                <ul class="navbar-nav d-flex flex-row nav-underline">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'service' %}">Service Enquiry</a>
+                    </li>
+                </ul>
+
+                <!-- Logo -->
+                <a class="navbar-brand px-2 d-none d-lg-block" href="{% url 'rdmotiv' %}">
+                    <span>RD</span>MOTIV
+                </a>
+
+                <!-- Right Menu -->
+                <ul class="navbar-nav d-flex flex-row nav-underline">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle is-active" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Our Services
+                        </a>
+                        <ul class="dropdown-menu nav-underline" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item nav-link" href="{% url 'ceramic_graphene_coatings' %}">Ceramic and Graphene coatings</a></li>
+                            <li><a class="dropdown-item nav-link" href="{% url 'paint_protection_films' %}">Paint protection films</a></li>
+                            <li><a class="dropdown-item nav-link active" href="{% url 'body_shop_denting_painting' %}">Body-shop (Denting & Painting)</a></li>
+                            <li><a class="dropdown-item nav-link" href="{% url 'wrap_jobs' %}">Wrap Jobs</a></li>
+                            <li><a class="dropdown-item nav-link" href="{% url 'detailing_and_interior_cleaning' %}">Detailing and Interior cleaning</a></li>
+                            <li><a class="dropdown-item nav-link" href="{% url 'insurance_claims' %}">Insurance Claims</a></li>
+                            <li><a class="dropdown-item nav-link" href="{% url 'other_services' %}">Other Services</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="container mt-5"> 
+        <nav style="--bs-breadcrumb-divider: '>>';"> 
+            <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'rdmotiv' %}" style="color: #ff3333; text-decoration: none;">Home</a></li>
+            <li class="breadcrumb-item active text-white" >Body-shop (Denting & Painting)</li>
+            </ol>
+        </nav>
+    </div>
+
+<!-- Content -->
+<div class="container mt-5">
+    <h2>Body-shop (Denting & Painting)</h2>
+    <p>We provide A-grade painting services across all types and categories of cars available in the market. It could be a panel of your new car, a complete outer body paint job for a decently aged vehicle, a custom colour paint job of your choice or maybe even a hardcore restoration of your old family’s car; we are here to help you out. Our experienced staff puts utmost attention in bringing out the best possible finish on your car’s paint. We diligently follow all required protocols and focus on delivering an exceptional experience that you probably might not have had at a body-shop before. Our paint jobs come with a 2-year application warranty and if taken good care of, the paint can easily last you a decade.</p>
+    <p>Choose from a range of Body, Wheel, Glasses, Plastic trim coatings, and Paint protection films after the Paint job, here at Brotomotiv. Full body paint jobs get discounts on detailing and paint protection services. Contact us by filling out the enquiry form and get your car painted today.</p>
+    
+    <h4>Note:</h4>
+    <ul>
+        <li>Heavily rusted vehicles or vehicles which have been painted multiple times before will not be covered under warranty.</li>
+        <li>We provide a 6-month warranty on Rusting, 1-year warranty on Blistering, Cracking, Peeling & Paint adhesion, and a 3-year warranty on Clear coat failure and/or Paint failure.</li>
+        <li>Paint shrinkage is normal and acceptable on cars with heavy base work. However, cracking and peeling of paint in such cars is still covered under warranty.</li>
+        <li>Life of the paint is totally dependent on the usage and maintenance by the customer.</li>
+    </ul>
+
+    <h3 class="text-center mb-4">Our Latest Work</h3>
+    <div class="row">
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <iframe style="padding: 1px;" width="100%" height="200" src="https://www.youtube.com/embed/a48KEhhh7Bk" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <iframe style="padding: 1px;" width="100%" height="200" src="https://www.youtube.com/embed/V0huMCtVuug" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <iframe style="padding: 1px;" width="100%" height="200" src="https://www.youtube.com/embed/ISsFg5Tm5AM" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <iframe style="padding: 1px;" width="100%" height="200" src="https://www.youtube.com/embed/XbvQ9h1TrmE" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

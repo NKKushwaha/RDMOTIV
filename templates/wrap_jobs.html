@@ -1,0 +1,106 @@
+{% extends 'nav.html' %}
+{% load static %}
+
+{% block title %}
+    <title>RDMOTIV - Wrap Jobs</title>
+{% endblock %}
+
+{% block boody_containt %}
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <!-- Logo on the left for mobile -->
+            <a class="navbar-brand d-lg-none" href=" {% url 'rdmotiv' %}">
+                <span>RD</span>MOTIV
+            </a>
+
+            <!-- Toggler on the right for mobile -->
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar content -->
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <!-- Left Menu -->
+                <ul class="navbar-nav d-flex flex-row nav-underline">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'service' %}">Service Enquiry</a>
+                    </li>
+                </ul>
+
+                <!-- Logo -->
+                <a class="navbar-brand px-2 d-none d-lg-block" href="{% url 'rdmotiv' %}">
+                    <span>RD</span>MOTIV
+                </a>
+
+                <!-- Right Menu -->
+                <ul class="navbar-nav d-flex flex-row nav-underline">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle is-active" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Our Services
+                        </a>
+                        <ul class="dropdown-menu nav-underline" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item nav-link" href="{% url 'ceramic_graphene_coatings' %}">Ceramic and Graphene coatings</a></li>
+                            <li><a class="dropdown-item nav-link" href="{% url 'paint_protection_films' %}">Paint protection films</a></li>
+                            <li><a class="dropdown-item nav-link" href="{% url 'body_shop_denting_painting' %}">Body-shop (Denting & Painting)</a></li>
+                            <li><a class="dropdown-item nav-link active" href="{% url 'wrap_jobs' %}">Wrap Jobs</a></li>
+                            <li><a class="dropdown-item nav-link" href="{% url 'detailing_and_interior_cleaning' %}">Detailing and Interior cleaning</a></li>
+                            <li><a class="dropdown-item nav-link" href="{% url 'insurance_claims' %}">Insurance Claims</a></li>
+                            <li><a class="dropdown-item nav-link" href="{% url 'other_services' %}">Other Services</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="container mt-5"> 
+        <nav style="--bs-breadcrumb-divider: '>>';"> 
+            <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'rdmotiv' %}" style="color: #ff3333; text-decoration: none;">Home</a></li>
+            <li class="breadcrumb-item active text-white" >Wrap Jobs</li>
+            </ol>
+        </nav>
+    </div>
+    
+<!-- Content -->
+<div class="container mt-5" >
+    <h2>Wrap Jobs</h2>
+    <p>Vinyl wrapping brings a new custom look to your car, without tampering the OEM paint job. We provide wrapping services with almost 300+ colours and shades available with the best in league finish and application. It could be a simple sports stripe across the bonnet, a dual tone look for your new car or maybe a complete colour swap with a fascinating shade that your OEM supplier couldn’t offer, we are here to help. Our wrap jobs come with a 2-year application warranty.</p>
+    <p>This service is usually recommended for cars that are in good shape and want to do something different, at the same time keeping the original paint intact. Choose from a range of Wheel, Glasses, and Plastic trim coatings along with your wrap job, here at Brotomotiv. Contact us by filling out the enquiry form and get your car wrapped today.</p>
+    
+    <h4>Note:</h4>
+    <ul>
+        <li>We use only the best in class material for wrapping.</li>
+        <li>Changing colour requires correction on the car's RC, through your local RTO.</li>
+        <li>Post care is utmost necessary with wrapping. Pressure washing and aggressive cleaning may tamper the edges and result in opening of the film from certain areas.</li>
+        <li>Application warranty covers natural peeling of the material. Customer’s mishandling or abuse of the material shall not be covered under warranty.</li>
+    </ul>
+
+    <h3 class="text-center mb-4">Our Latest Work</h3>
+    <div class="row">
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <iframe style="padding: 1px;" width="100%" height="200" src="https://www.youtube.com/embed/a48KEhhh7Bk" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <iframe style="padding: 1px;" width="100%" height="200" src="https://www.youtube.com/embed/V0huMCtVuug" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <iframe style="padding: 1px;" width="100%" height="200" src="https://www.youtube.com/embed/ISsFg5Tm5AM" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <iframe style="padding: 1px;" width="100%" height="200" src="https://www.youtube.com/embed/XbvQ9h1TrmE" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

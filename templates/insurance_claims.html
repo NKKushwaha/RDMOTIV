@@ -1,0 +1,73 @@
+{% extends 'nav.html' %}
+{% load static %}
+
+{% block title %}
+    <title>RDMOTIV - Insurance Claims</title>
+{% endblock %}
+
+{% block boody_containt %}
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <!-- Logo on the left for mobile -->
+            <a class="navbar-brand d-lg-none" href=" {% url 'rdmotiv' %}">
+                <span>RD</span>MOTIV
+            </a>
+
+            <!-- Toggler on the right for mobile -->
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar content -->
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <!-- Left Menu -->
+                <ul class="navbar-nav d-flex flex-row nav-underline">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'service' %}">Service Enquiry</a>
+                    </li>
+                </ul>
+
+                <!-- Logo -->
+                <a class="navbar-brand px-2 d-none d-lg-block" href="{% url 'rdmotiv' %}">
+                    <span>RD</span>MOTIV
+                </a>
+
+                <!-- Right Menu -->
+                <ul class="navbar-nav d-flex flex-row nav-underline">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle is-active" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Our Services
+                        </a>
+                        <ul class="dropdown-menu nav-underline" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item nav-link" href="{% url 'ceramic_graphene_coatings' %}">Ceramic and Graphene coatings</a></li>
+                            <li><a class="dropdown-item nav-link" href="{% url 'paint_protection_films' %}">Paint protection films</a></li>
+                            <li><a class="dropdown-item nav-link" href="{% url 'body_shop_denting_painting' %}">Body-shop (Denting & Painting)</a></li>
+                            <li><a class="dropdown-item nav-link" href="{% url 'wrap_jobs' %}">Wrap Jobs</a></li>
+                            <li><a class="dropdown-item nav-link" href="{% url 'detailing_and_interior_cleaning' %}">Detailing and Interior cleaning</a></li>
+                            <li><a class="dropdown-item nav-link active" href="{% url 'insurance_claims' %}">Insurance Claims</a></li>
+                            <li><a class="dropdown-item nav-link" href="{% url 'other_services' %}">Other Services</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="container mt-5"> 
+        <nav style="--bs-breadcrumb-divider: '>>';"> 
+            <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'rdmotiv' %}" style="color: #ff3333; text-decoration: none;">Home</a></li>
+            <li class="breadcrumb-item active text-white" >Insurance Claims</li>
+            </ol>
+        </nav>
+    </div>
+    
+<!-- Content -->
+<div class="container mt-5 mb-5">
+    <h2>Insurance Claims</h2>
+    <p>Getting your brand new car painted just because of a small accident could be a hassle. Claiming insurance and getting the right quality paint job is what worries most of the people. We offer cashless insurance claims with almost all available companies in the market, which means, you can easily drop of your car at our body-shop and let us take care of the rest. We handle insurance claims with just as much attention and honesty as we handle our custom paint jobs. We promise Grade-A material application and the best possible finish our your car.</p>
+</div>
+
+{% endblock %}

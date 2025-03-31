@@ -1,0 +1,270 @@
+{% extends 'nav.html' %}
+{% load static %}
+
+{% block title %}
+    <title>RDMOTIV - Service Enquiry</title>
+{% endblock %}
+
+{% block boody_containt %}
+<body class="service-enquiry-page">
+<nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <!-- Logo on the left for mobile -->
+            <a class="navbar-brand d-lg-none" href=" {% url 'rdmotiv' %}">
+                <span>RD</span>MOTIV
+            </a>
+
+            <!-- Toggler on the right for mobile -->
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar content -->
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <!-- Left Menu -->
+                <ul class="navbar-nav d-flex flex-row nav-underline">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'service' %}">Service Enquiry</a>
+                    </li>
+                </ul>
+
+                <!-- Logo -->
+                <a class="navbar-brand px-2 d-none d-lg-block" href="{% url 'rdmotiv' %}">
+                    <span>RD</span>MOTIV
+                </a>
+
+                <!-- Right Menu -->
+                <ul class="navbar-nav d-flex flex-row nav-underline">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Our Services
+                        </a>
+                        <ul class="dropdown-menu nav-underline" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item nav-link" href="{% url 'ceramic_graphene_coatings' %}">Ceramic and Graphene coatings</a></li>
+                            <li><a class="dropdown-item nav-link" href="{% url 'paint_protection_films' %}">Paint protection films</a></li>
+                            <li><a class="dropdown-item nav-link" href="{% url 'body_shop_denting_painting' %}">Body-shop (Denting & Painting)</a></li>
+                            <li><a class="dropdown-item nav-link" href="{% url 'wrap_jobs' %}">Wrap Jobs</a></li>
+                            <li><a class="dropdown-item nav-link" href="{% url 'detailing_and_interior_cleaning' %}">Detailing and Interior cleaning</a></li>
+                            <li><a class="dropdown-item nav-link" href="{% url 'insurance_claims' %}">Insurance Claims</a></li>
+                            <li><a class="dropdown-item nav-link" href="{% url 'other_services' %}">Other Services</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="container mt-5"> 
+        <nav style="--bs-breadcrumb-divider: '>>';"> 
+            <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'rdmotiv' %}" style="color: #ff3333; text-decoration: none;">Home</a></li>
+            <li class="breadcrumb-item active text-white" >Service Enquiry</li>
+            </ol>
+        </nav>
+    </div>
+        
+    <!-- Service Enquiry Form -->
+    <div class="container">
+        <div class=" mt-5">
+            <h4>Welcome to RDMOTIV</h4>
+            <p>India's leading Bodyshop and Detailing centre. To get an estimated quote for your Car, please fill the form below.</p>
+            <p style="color: red;">Please Note: You will receive a reply to your enquiry on the Email ID mentioned on this enquiry form.</p>
+            <p style="color: red;">Our response time is 24 to 48 Hrs, Please check both your inbox & spam folder.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="service-enquiry-form">
+            <h2>Service Enquiry</h2>
+            <form id="serviceEnquiryForm">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="form-group">
+                            <label for="name" class="mb-2">NAME <span style="color: red;">*</span></label>
+                            <input type="text" id="name" name="name" placeholder="Name" required style="width: 100%;">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-group">
+                            <label for="email" class="mb-2">EMAIL <span style="color: red;">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="Email" required style="width: 100%;">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-group">
+                            <label for="phone" class="mb-2">PHONE <span style="color: red;">*</span></label>
+                            <input type="tel" id="phone" name="phone" placeholder="Phone" required style="width: 100%;">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">   
+                    <div class="col-4">
+                        <div class="form-group">
+                            <label for="state" class="mb-2">STATE <span style="color: red;">*</span></label>
+                            <select id="state" name="state" required style="width: 100%;">
+                                <option selected disabled value="">Select State</option>
+                                <!-- Add state options here -->
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-group">
+                            <label for="city" class="mb-2">CITY <span style="color: red;">*</span></label>
+                            <select id="city" name="city" required style="width: 100%;">
+                                <option selected disabled value="">Select City</option>
+
+                                <!-- Cities will be populated based on state selection -->
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-group">
+                            <label for="pincode" class="mb-2">PINCODE <span style="color: red;">*</span></label>
+                            <input type="text" id="pincode" name="pincode" placeholder="Pincode" required style="width: 100%;">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4" >
+                        <div class="form-group" id="registration-number-group">
+                            <label for="registrationNumber" class="mb-2">VEHICLE REGISTRATION NUMBER <span style="color: red;">*</span></label>
+                            <input type="text" id="registrationNumber" name="registrationNumber" placeholder="Registration Number" required style="width: 100%;">
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-2">
+                                    <input type="checkbox" id="unregistered-vehicle" onclick="toggleRegistrationNumber()">
+                                </div>
+                                <div class="col-10">
+                                    <label for="unregistered-vehicle">My vehicle is Unregistered</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-group">
+                            <label for="carMake" class="mb-2">CAR MAKE <span style="color: red;">*</span></label>
+                            <select id="car-make" name="carMake" required style="width: 100%;">
+                                <option selected disabled value="">Select Car Make</option>
+                                <option value="Toyota">Toyota</option>
+                                <option value="Honda">Honda</option>
+                                <option value="Ford">Ford</option>
+                                <option value="Chevrolet">Chevrolet</option>
+                                <option value="Nissan">Nissan</option>
+                                <option value="Volkswagen">Volkswagen</option>
+                                <option value="Hyundai">Hyundai</option>
+                                <option value="Kia">Kia</option>
+                                <option value="Subaru">Subaru</option>
+                                <option value="Mazda">Mazda</option>
+                                <option value="BMW">BMW</option>
+                                <option value="Mercedes-Benz">Mercedes-Benz</option>
+                                <option value="Audi">Audi</option>
+                                <option value="Lexus">Lexus</option>
+                                <option value="Porsche">Porsche</option>
+                                <option value="Land Rover">Land Rover</option>
+                                <option value="Jaguar">Jaguar</option>
+                                <option value="Fiat">Fiat</option>
+                                <option value="Chrysler">Chrysler</option>
+                                <option value="Dodge">Dodge</option>
+                                <option value="Ram">Ram</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-group">
+                            <label for="carModel" class="mb-2">CAR MODEL <span style="color: red;">*</span></label>
+                            <input type="text" id="carModel" name="carModel" placeholder="Car Model" required style="width: 100%;">
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="row">
+                    <div class="col-4">
+                        <div class="form-group">
+                            <label for="manufacturingYear" class="mb-2">MANUFACTURING YEAR <span style="color: red;">*</span></label>
+                            <select id="manufacturingYear" name="manufacturingYear" required style="width: 100%;">
+                                <option selected disabled value="">Select Manufacturing Year</option>
+                                <option value="2025">2025</option>
+                                <option value="2024">2024</option>
+                                <option value="2023">2023</option>
+                                <option value="2022">2022</option>
+                                <option value="2021">2021</option>
+                                <option value="2020">2020</option>
+                                <option value="2019">2019</option>
+                                <option value="2018">2018</option>
+                                <option value="2017">2017</option>
+                                <option value="2016">2016</option>
+                                <option value="2015">2015</option>
+                                <option value="2014">2014</option>
+                                <option value="2013">2013</option>
+                                <option value="2012">2012</option>
+                                <option value="2011">2011</option>
+                                <option value="2010">2010</option>
+                                <option value="2009">2009</option>
+                                <option value="2008">2008</option>
+                                <option value="2007">2007</option>
+                                <option value="2006">2006</option>
+                                <option value="2005">2005</option>
+                                <option value="2004">2004</option>
+                                <option value="2003">2003</option>
+                                <option value="2002">2002</option>
+                                <option value="2001">2001</option>
+                                <option value="2000">2000</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-group">
+                            <label for="service" class="mb-2">SERVICE TYPE <span style="color: red;">*</span></label>
+                            <select id="service" name="service" required style="width: 100%;">
+                                <option selected disabled value="">Select Service Type</option>
+                                <option value="ceramic">Ceramic & Graphene Coatings</option>
+                                <option value="ppf">Paint Protection Films</option>
+                                <option value="bodyshop">Body-shop (Denting & Painting)</option>
+                                <option value="wrap">Wrap Jobs</option>
+                                <option value="detailing">Detailing and Interior cleaning</option>
+                                <option value="insurance">Insurance Claims</option>
+                                <option value="other">Other Services</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-group">
+                            <label for="referralSource" class="mb-2">HOW DID YOU HEAR ABOUT US?</label>
+                            <select id="referralSource" name="referralSource"  style="width: 100%;">
+                                <option selected disabled value="">Select Option</option>
+                                <option value="friend">Friend</option>
+                                <option value="social_media">Social Media</option>
+                                <option value="search_engine">Search Engine</option>
+                                <option value="advertisement">Advertisement</option>
+                                <option value="website">Website</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">   
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="message" class="mb-2">MESSAGE</label>
+                            <textarea id="message" name="message" placeholder="Additional Message" rows="4" style="width: 100%;"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="submit-btn" style="width: 100%;">Submit Enquiry</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+   
+
+{% endblock %}
